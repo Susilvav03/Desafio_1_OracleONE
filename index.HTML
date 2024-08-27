@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <!-- Imagen superior izquierda -->
+        <div class="logo">
+            <img src="./IMG/Logo.png" alt="Logo o imagen de marca">
+        </div>
+
+        <div class="section">
+            <div class="l_panel">
+                <textarea id="inputText" placeholder="Ingrese el texto aquí..."></textarea>
+                <div class="info-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m0-4h.01M12 6v.01M12 16v4m0 4H6a2 2 0 01-2-2V6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2h-6z"/>
+                    </svg>
+                    Solo letras minúsculas y sin acentos
+                </div>
+                <div class="btns">
+                    <button class="b_encrypt" onclick="encryptText()">Encriptar</button>
+                    <button class="b_decrypt" onclick="decryptText()">Desencriptar</button>
+                </div>
+            </div>
+            <div class="r_panel">
+                <img id="rImage" src="./IMG/Muñeco.png" alt="Imagen descriptiva">
+                <h3 id="outputMessage">Ningún mensaje fue encontrado</h3>
+                <p id="r_paragraph">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <button id="copyButton" class="b_copy" onclick="copyToClipboard()">Copiar</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Elaborado por Susana Silva Vallejo</p>
+    </footer>
+    
+    <script src="encriptador.js"></script>
+
+</body>
+
+</html>

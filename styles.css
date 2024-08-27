@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --c-primario: #F3F5FC;
+    --c-secundario: #FFFFFF;
+    --c-terciario: #0A3871;
+    --c-extra: #D8DFE8;
+    --c-letra1: #343A40;
+    --c-letra2: #495057;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--c-primario);
+    color: var(--c-terciario);
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    position: relative;
+}
+
+/* Imagen en la parte superior izquierda */
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    gap: 40px;
+}
+
+.logo img {
+    width: 120px;
+    height: 48px;
+}
+
+.section {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 200px;
+}
+
+.l_panel {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    height: 944px;
+    width: 640px;
+    padding-top: 128px;
+    padding-left: 120px;
+}
+
+textarea {
+    font-family: "Inter", sans-serif;
+    color: var(--c-terciario);
+    width: 100%;
+    height: 200px;
+    border: none;
+    background-color: transparent;
+    font-size: 32px;
+    resize: none;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+textarea::placeholder {
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--c-terciario);
+
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 24px;
+}
+
+.btns button {
+    padding: 15px 30px;
+    border-radius: 24px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 328px;
+    height: 67px;
+}
+
+.b_encrypt {
+    background-color: var(--c-terciario);
+    color: var(--c-secundario);
+}
+
+.b_decrypt {
+    background-color: transparent;
+    color: var(--c-terciario);
+    border: 1px solid var(--c-terciario);
+}
+
+.info-text {
+    display: flex;
+    align-items: left;
+    font-size: 12px;
+    padding-top: 483px;
+    color: var(--c-letra2);
+}
+
+.info-text svg {
+    margin-right: 5px;
+}
+
+.r_panel {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--c-secundario);
+    border-radius: 32px;
+    padding-top: 20px;
+    width: 400px;
+    height: 944px;
+}
+
+.r_panel img {
+    width: 336px;
+    height: 304px;
+    margin-bottom: 20px;
+}
+
+.r_panel h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--c-letra1);
+    width: 336px;
+    height: 58px;
+}
+
+.r_panel p {
+    font-size: 16px;
+    color: var(--c-letra2);
+    width: 336px;
+    height: 48px;
+}
+
+.b_copy {
+    display: none;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: var(--c-terciario);
+    font-size: 16px;
+    cursor: pointer;
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    border: 1px solid var(--c-terciario);
+}
+
+/* Ocultar imagen y texto por defecto */
+.hidden {
+    display: none;
+}
+
+footer {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    
+    .section {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .l_panel {
+        width: 688px;
+        padding-left: 40px;
+        padding-top: 140px;
+        align-items: left;
+    }
+
+    .info-text {
+        padding-top: 468px;
+    }
+
+    .btns button {
+        width: 332px;
+    }
+
+    .r_panel {
+        width: 688px;
+        height: auto;
+    }
+
+    .r_panel img {
+        display: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .logo {
+        height: 48px;
+        width: auto;
+        padding-top: 24px;
+        padding-left: 0px;
+    }
+
+    .l_panel {
+        width: 343px;
+        padding-top: 150px;
+        padding-left: 16px;
+    }
+
+    .r_panel {
+        width: 343px;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+    .r_panel h3 {
+        width: 343px;
+    }
+
+    .info-text {
+        padding-top: 239px;
+    }
+
+    textarea {
+        margin: 0;
+        padding: 0;
+    }
+
+    .btns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btns button {
+        width: 343px;
+    }
+}
